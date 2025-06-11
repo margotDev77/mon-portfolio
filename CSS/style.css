@@ -686,13 +686,13 @@ li {
   display: flex;
   width: 30%;
   height: 35vh;
-  background-image: url(/Medias/print-clear.png);
+  background-image: url("../Medias/print-clear.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 body.dark-mode .column-print-img {
-  background-image: url(/Medias/print-dark.png);
+  background-image: url("../Medias/print-dark.png");
 }
 
 .column-print {

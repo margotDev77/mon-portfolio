@@ -98,8 +98,7 @@
   width: 10vh;
   height: 10vh;
   border-radius: 10vh;
-  background-image: url(/Medias/icon-pro.png);
-   /* background-image: url(/Médias/profil.PNG); */
+  background-image: url("../Medias/icon-pro.png");
   background-position: center;
   background-size: cover;
   box-shadow: 5px 5px 7px #00000063;
@@ -204,7 +203,7 @@
   display: flex;
   border-radius: 30px;
   width: 50%;
-  background-image: url(/Medias/contact-machine.webp);
+  background-image: url("../Medias/contact-machine.webp");
   background-size: cover;
 }
 

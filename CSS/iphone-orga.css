@@ -433,7 +433,7 @@ button {
   width: 35vh;
   height: 75vh;
   overflow: hidden;
-  background-image: url(/Medias/APP-Medias/iphone-fd-white.png);
+  background-image: url("../Medias/APP-Medias/iphone-fd-white.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1095,7 +1095,7 @@ button {
   width: 100%;
   margin: 7px;
   border-radius: 12px;
-  background-image: url(/Medias/APP-Medias/plans.png);
+  background-image: url("../Medias/APP-Medias/plans.png");
   background-position: center;
   background-size: contain;
   aspect-ratio: 1/1;
@@ -1105,7 +1105,7 @@ button {
   width: 100%;
   margin: 7px;
   border-radius: 12px;
-  background-image: url(/Medias/APP-Medias/safari.png);
+  background-image: url("../Medias/APP-Medias/safari.png");
   background-position: center;
   background-size: contain;
   aspect-ratio: 1/1;
@@ -1115,7 +1115,7 @@ button {
   width: 100%;
   margin: 7px;
   border-radius: 12px;
-  background-image: url(/Medias/APP-Medias/google.png);
+  background-image: url("../Medias/APP-Medias/google.png");
   background-position: center;
   background-size: contain;
   aspect-ratio: 1/1;
@@ -2615,7 +2615,7 @@ ul {
 
 .background-nuageux {
   padding: 10px;
-  background-image: url(/Medias/APP-Medias/background-nuageux.png);
+  background-image: url("../Medias/APP-Medias/background-nuageux.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2625,7 +2625,7 @@ ul {
 
 .background-ensoleille {
   padding: 10px;
-  background-image: url(/Medias/APP-Medias/background-ensoleille.png);
+  background-image: url("../Medias/APP-Medias/background-ensoleille.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3934,7 +3934,7 @@ p {
   position: absolute;
   top: 4.5vh;
   height: 37vh;
-  background-image: url(/Medias/APP-Medias/plans-map.jpg);
+  background-image: url("../Medias/APP-Medias/plans-map.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4736,7 +4736,7 @@ article {
 }
 
 .icon-fruit-ninja {
-  background-image: url(/Medias/APP-Medias/fruit-ninja.png);
+  background-image: url("../Medias/APP-Medias/fruit-ninja.png");
   width: 100%;
   margin: 7px;
   border-radius: 12px;

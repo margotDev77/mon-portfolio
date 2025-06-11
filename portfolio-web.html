@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margot CV | Portfolio Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="CSS/atomic.css">
+    <link rel="stylesheet" href="CSS/portfolio-web.css">
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="styesheet" href="Médias/syle.js">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+
+<body
+    onload="afficherDateAccueilNeum(), afficherDateNeum(), afficherDateAccueilDark(), afficherDateDark(), afficherDateAccueil(), afficherDate(),afficherDateAlgo()">
+
+    <div id="info-banner">
+        Ce site n'est pas encore responsive. Merci de le consulter sur un ordinateur.
+    </div>
+
+    <header class="headerFlex">
+        <div class="logo"><a href="index.html">
+                <img id="logo" src="Medias/dwwm-logo.png" alt="Logo" class="logo-size"></a>
+        </div>
+        <div class="home-menu">
+            <nav>
+                <ul class="menu typo-1 font-size">
+                    <li class="open-btn button-more"><a>Portfolio</a></li>
+                    <li class="button-more"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="content-rac-portfolio">
+                <a class="button-less typo-1 font-size" href="portfolio-print.html">Print</a>
+            </div>
+        </div>
+        <div class="bloc-mode">
+            <div class="menu-color-theme">
+                <button id="theme-toggle"><i id="theme-icon" class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="filterFlex">
+            <div class="filter-content">
+                <div class="home-menu-2 typo-1 font-size-2 color-fd-clear">
+                    <div class="filter-btn active" data-filter="tout">tout</div>
+                    <div class="filter-btn" data-filter="frontEnd">front-end</div>
+                    <div class="filter-btn" data-filter="backEnd">back-end</div>
+                    <div class="filter-btn" data-filter="motionDesign">motion design</div>
+                    <div class="filter-btn" data-filter="montageVideo">montage vidéo</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="webFlex">
+            <div class="mediasFlex">
+                <div class="container-medias image frontEnd">
+                    <div class="bloc-icon-app">
+                        <a href="page-iphone.html" target="_blank" rel="noopener noreferrer"><img
+                                src="Medias/APP-Medias/ios-logo.png" class="img-back-size"></a>
+                        <button class="button-more typo-1 font-size"><a href="page-iphone.html" target="_blank"
+                                rel="noopener noreferrer">voir<i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                </div>
+
+                <div class="container-medias image motionDesign">
+                    <div class="galleryViz">
+                        <div class="galleryViz-item" data-type="image" data-title="Creafi3D Animation"
+                            data-description="Animation de mon logo pour la modélisation/impression 3D" data-src="Medias/portfolio/anim-creafi3d.gif">
+                            <img src="Medias/portfolio/anim-creafi3d.gif" alt="Image 1" class="bloc-medias">
+                        </div>
+                    </div>
+                    <div class="info-web typo-1 font-size">animation pour CREAFI3D</div>
+                </div>
+
+                <div class="container-medias image backEnd">
+                    <div class="algo-content">
+                        <div class="contenair-algo">
+                            <div class="bloc-option">
+                                <div class="line">
+                                    <p>DÉBUT</p>
+                                </div>
+                                <div class="line-tab">
+                                    <p>ÇA FONCTIONNE ?</p>
+                                </div>
+                                <div class="line-tab2">
+                                    <div class="bloc-point">
+                                        <span class="point">.</span>
+                                        <span class="point">.</span>
+                                        <span class="point">.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line-content-button">
+                                <button class="openAlgo-btn colorAlgo"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-medias image frontEnd"> <div class="galleryViz">
+                        <div class="galleryViz-item" data-type="image" data-title="Capture écran jeu"
+                            data-description="Mini jeu de voitue"
+                            data-src="Medias/foule-contact-jeu.png">
+                            <img src="Medias/foule-contact-jeu.png" alt="Image 5" class="bloc-medias">
+                        </div>
+                    </div>
+                    <div class="info-web typo-1 font-size">Mini jeu de voiture</div>
+                </div>
+
+
+                <div class="container-medias image backEnd"></div>
+
+                <div class="container-medias image montageVideo">
+                    <div class="galleryViz">
+                        <div class="galleryViz-item" data-type="video" data-title="Capture écran vidéo"
+                            data-description="Site Wordpress/WooCommerce que j'ai conçu pour le titre d'Infographiste Metteur en Page"
+                            data-src="Medias/portfolio/boutique-portfolio_2.mp4">
+                            <img src="Medias/portfolio/boutique-portfolio.jpg" alt="Vidéo 1" class="bloc-medias">
+                        </div>
+                    </div>
+                    <div class="info-web typo-1 font-size">site web Wordpress & WooCommerce</div>
+                </div>
+
+                <div class="container-medias image frontEnd">
+                    <div class="galleryViz">
+                        <div class="galleryViz-item" data-type="image" data-title="Image 2"
+                            data-description="Description de l'image 2" data-src="Medias/portfolio/atom-design-01.webp">
+                            <img src="Medias/portfolio/atom-design-01.webp" alt="Image 2" class="bloc-medias">
+                        </div>
+                    </div>
+                    <div class="info-web typo-1">atomic design</div>
+                </div>
+
+                <div class="container-medias image motionDesign">
+                    <div class="galleryViz">
+                        <div class="galleryViz-item" data-type="image" data-title="Graphy Concept Animation"
+                            data-description="Animation pour un Infographiste"
+                            data-src="Medias/portfolio/anim-graphy-concept.gif">
+                            <img src="Medias/portfolio/anim-graphy-concept.gif" alt="Image 4" class="bloc-medias">
+                        </div>
+                    </div>
+                    <div class="info-web typo-1 font-size">animation pour GRAPHY CONCEPT</div>
+                </div>
+
+                <div class="container-medias image backEnd"></div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-bttn" id="closeBton"><i class="fa-solid fa-circle-xmark"></i></span>
+            <div class="lightbox-media-container" id="mediaContainer"></div>
+            <div class="media-info">
+                <h3 id="mediaTitle"></h3>
+                <p id="mediaDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <div class="button-close fillIn"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="container">
+                <div class="top">
+                    <h1 class="typo-1 font-size-gros-titre font-weight-gros-titre color-fd-clear">Portfolio</h1>
+                    <div class="package-container">
+                        <div class="packages">
+                            <h1 class="typo-1 color-accent">Print</h1>
+                            <ul class="list typo-courante">
+                                <li>identité visuelle</li>
+                                <li>mise en page</li>
+                                <li>packaging</li>
+                                <li>plv</li>
+                            </ul>
+                            <a href="portfolio-print.html" class="button-pop color-fd-clear typo-1">Voir</a>
+                        </div>
+                        <div class="packages">
+                            <h1 class="typo-1 color-accent">Web</h1>
+                            <ul class="list typo-courante">
+                                <li>front-end</li>
+                                <li>back-end</li>
+                                <li>motion design</li>
+                                <li>montage vidéo</li>
+                            </ul>
+                            <a href="portfolio-web.html" class="button-pop color-fd-clear typo-1">Voir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="screenAlgo-overlay">
+        <div class="screenAlgo-content">
+            <div class="clock-content">
+                <p class="txt-clock fontAlgo fontSize1 colorAlgo">\Users\Visitor> </p>
+                <p class="fontAlgo fontSize1 colorAlgo" id="dateAlgo"></p>
+                <p class="fontAlgo fontSize1 colorAlgo" id="clockAlgo"></p>
+            </div>
+
+            <div class="container-quest" id="questionnaire">
+                <div class="quest-content">
+                    <div class="txt-commence fontAlgo fontSize1 colorAlgo">Début</div>
+                </div>
+                <!-- 1 -->
+                <div class="question indentation" id="questionFonct">
+                    <p class="txt-commence fontAlgo fontSize1 colorAlgo" onclick="handleClick">Ca fonctionne ?</p>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionFonct', 'questionFonctOui')">Oui</button>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionFonct', 'questionFonctNon')">Non</button>
+                </div>
+
+                <!-- fonctionne Oui -->
+                <div class="question quest-column hidden" id="questionFonctOui">
+                    <div class="indentation">
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">N'y touche surtout pas !</p>
+                        </div>
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                        </div>
+                    </div>
+                    <div class="quest-content">
+                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    </div>
+                </div>
+
+                <!-- fonctionne Non -->
+                <div class="question indentation hidden" id="questionFonctNon">
+                    <p class="txt-commence fontAlgo fontSize1 colorAlgo">Tu y as touché ?</p>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionFonctNon', 'questionTouchOui')">Oui</button>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionFonctNon', 'questionTouchNon')">Non</button>
+                </div>
+
+                <!-- touché Oui) -->
+                <div class="question indentation quest-column hidden" id="questionTouchOui">
+                    <div class="quest-content">
+                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Fallait pas ...</p>
+                    </div>
+                    <div class="quest-content">
+                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Quelqu'un est au courant ?</p>
+                        <button class="btn fontAlgo"
+                            onclick="handleResponse('questionTouchOui', 'questionFauteOui')">Oui</button>
+                        <button class="btn fontAlgo"
+                            onclick="handleResponse('questionTouchNon', 'questionCourantNon')">Non</button>
+                    </div>
+                </div>
+
+                <!-- courant Non -->
+                <div class="question quest-column hidden" id="questionCourantNon">
+                    <div class="indentation">
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Cache le vite !</p>
+                        </div>
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                        </div>
+                    </div>
+                    <div class="quest-content">
+                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    </div>
+                </div>
+
+                <!-- touché Non -->
+                <div class="question indentation hidden" id="questionTouchNon">
+                    <p class="txt-commence fontAlgo fontSize1 colorAlgo">C'est de ta faute ?</p>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionTouchNon', 'questionFauteOui')">Oui</button>
+                    <button class="btn fontAlgo"
+                        onclick="handleResponse('questionTouchNon', 'questionFauteNon')">Non</button>
+                </div>
+
+                <!-- faute Oui -->
+                <div class="question quest-column hidden" id="questionFauteOui">
+                    <div class="indentation">
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">T'es foutu !</p>
+                        </div>
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Tu peux accusé quelqu'un d'autre ?</p>
+                            <button class="btn fontAlgo"
+                                onclick="handleResponse('questionFauteOui', 'questionAccuseOui')">Oui</button>
+                            <button class="btn fontAlgo"
+                                onclick="handleResponse('questionFauteOui', 'questionAccuseNon')">Non</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- accuse Oui -->
+                <div class="question quest-column hidden" id="questionAccuseOui">
+                    <div class="quest-content indentation">
+                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                    </div>
+                    <div class="quest-content">
+                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    </div>
+                </div>
+
+                <!-- accuse Non -->
+                <div class="question quest-column hidden" id="questionAccuseNon">
+                    <div class="quest-content indentation">
+                        <p class="txt-commence fontAlgo fontSize1 colorAlgo">T'es foutu !</p>
+                    </div>
+                    <div class="quest-content-smiley">
+                        <div class="txt-smiley fontAlgo colorAlgo">:(</div>
+                    </div>
+                    <div class="quest-content">
+                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    </div>
+                </div>
+
+                <!-- faute Non -->
+                <div class="question quest-column hidden" id="questionFauteNon">
+                    <div class="indentation">
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Fais comme si t'avais rien vu</p>
+                        </div>
+                        <div class="quest-content">
+                            <p class="txt-commence fontAlgo fontSize1 colorAlgo">Alors pas de problème</p>
+                        </div>
+                    </div>
+                    <div class="quest-content">
+                        <div class="txt-commence fontAlgo fontSize1 colorAlgo">Fin</div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-btn-content">
+                <button class="button-back fontAlgo colorAlgo" onclick="resetQuestionnaire()"><i
+                        class="fa-solid fa-arrow-rotate-left"></i></button>
+                <button class="button-back fontAlgo colorAlgo fillInAlgo"><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="debordement-menu">
+        <div id="fixedFooter" class="content-menu fixed">
+            <div class="headerFlex-hamburger typo-1 font-size">
+                <div class="logo-hamburger"><a href="index.html">
+                        <img src="Medias/dwwm-logo.png" class="logo-size-hamburger"></a>
+                </div>
+                <div class="home-menu-hamburger">
+                    <nav>
+                        <ul class="menu-hamburger typo-1">
+                            <li class="open-btn-tel"><a>Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bloc-mode-footer">
+                    <div class="menu-color-theme-footer">
+                        <li><a href="portfolio-web.html"><span class="color-mode-footer material-symbols-outlined">
+                                    dark_mode
+                                </span></a></li>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollUp">
+        <a href="#top"><i class="color-fd-clear fa-regular fa-circle-up"></i></a>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const icon = document.getElementById('theme-icon');
+            const logo = document.getElementById('logo');
+            const body = document.body;
+
+            function updateIcon(isDark) {
+                if (isDark) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+
+            function updateLogo(isDark) {
+                logo.src = isDark ? 'Medias/dwwm-logo-blanc.png' : 'Medias/dwwm-logo.png';
+            }
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                updateIcon(true);
+                updateLogo(true);
+            } else {
+                updateIcon(false);
+                updateLogo(false);
+            }
+
+            toggleButton.addEventListener('click', () => {
+                const isDark = body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateIcon(isDark);
+                updateLogo(isDark);
+            });
+        });
+    </script>
+
+    <script>
+        jQuery(function () {
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 200) {
+                        $('#scrollUp').css('right', '30px');
+                    } else {
+                        $('#scrollUp').removeAttr('style');
+                    }
+
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+
+        /************************* visonneuse img video ****************************/
+
+        const galleryItems = document.querySelectorAll(".galleryViz-item");
+        const lightbox = document.getElementById("lightbox");
+        const mediaContainer = document.getElementById("mediaContainer");
+        const mediaTitle = document.getElementById("mediaTitle");
+        const mediaDescription = document.getElementById("mediaDescription");
+        const closeBton = document.getElementById("closeBton");
+
+        galleryItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const type = item.getAttribute("data-type");
+                const src = item.getAttribute("data-src");
+                const title = item.getAttribute("data-title");
+                const description = item.getAttribute("data-description");
+
+                mediaContainer.innerHTML = "";
+
+                if (type === "image") {
+                    const img = document.createElement("img");
+                    img.src = src;
+                    mediaContainer.appendChild(img);
+                } else if (type === "video") {
+                    const video = document.createElement("video");
+                    video.src = src;
+                    video.controls = true;
+                    mediaContainer.appendChild(video);
+                }
+
+                mediaTitle.textContent = title;
+                mediaDescription.textContent = description;
+
+                lightbox.style.display = "flex";
+                document.body.classList.add("no-scroll");
+
+                lightbox.addEventListener("click", (event) => {
+                    if (event.target === lightbox) {
+                        lightbox.style.display = "none";
+                        document.body.classList.remove("no-scroll");
+                    }
+                });
+            });
+        });
+
+        closeBton.addEventListener("click", () => {
+            lightbox.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+
+
+        // /************************************** pop up **************************************/
+
+        var openBtn = document.querySelector(".open-btn");
+        var overlay = document.querySelector(".popup-overlay");
+        var closeBtn = document.querySelector(".fillIn");
+
+        openBtn.addEventListener("click", function () {
+            overlay.style.display = "flex";
+            document.body.classList.add("no-scroll");
+        });
+
+        overlay.addEventListener("click", (event) => {
+            if (event.target === overlay) {
+                overlay.style.display = "none";
+                document.body.classList.remove("no-scroll");
+            }
+        });
+
+        closeBtn.addEventListener("click", function () {
+            overlay.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+
+        /**************************** header tel ****************************/
+
+        // function scrollToBottom() {
+        //     window.scrollTo({
+        //         left: 0,
+        //         top: document.body.scrollHeight,
+        //         behavior: 'smooth'
+        //     });
+        // }
+
+        // const bar = document.querySelector('#fixedFooter');
+
+        // let isAtBottom = false;
+        // function setIsAtBottom(flag) {
+        //     isAtBottom = flag;
+        // }
+
+        // const handleScroll = () => {
+        //     window.requestAnimationFrame(() => {
+        //         const windowInnerHeight = window.innerHeight;
+        //         const pageYOffset = window.pageYOffset;
+        //         const documentHeight = document.body.offsetHeight;
+        //         setIsAtBottom((windowInnerHeight + pageYOffset) / documentHeight >= 0.95);
+        //     });
+        // };
+
+        // window.addEventListener('scroll', handleScroll);
+
+        /**************************** filtre ****************************/
+        var filterBtns = document.querySelectorAll(".filter-btn");
+        var images = document.querySelectorAll(".image");
+
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var filter = btn.getAttribute("data-filter");
+
+                filterBtns.forEach(function (btn) {
+                    btn.classList.remove("active");
+                });
+                btn.classList.add("active");
+
+                images.forEach(function (image) {
+                    if (filter === "tout" || image.classList.contains(filter)) {
+                        image.style.display = "";
+                    } else {
+                        image.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        /************************* screen algo ****************************/
+        var openBoutton = document.querySelector(".openAlgo-btn");
+        var overlayScreen = document.querySelector(".screenAlgo-overlay");
+        var closeBoutton = document.querySelector(".fillInAlgo");
+
+        openBoutton.addEventListener("click", function () {
+            overlayScreen.style.display = "flex";
+            document.body.classList.add("no-scroll");
+        });
+
+        overlayScreen.addEventListener("click", (event) => {
+            if (event.target === overlayScreen) {
+                overlayScreen.style.display = "none";
+                document.body.classList.remove("no-scroll");
+            }
+        });
+
+        closeBoutton.addEventListener("click", function () {
+            overlayScreen.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+
+
+        /**************************** heure / date ****************************/
+
+        function afficherDateAlgo() {
+            const joursSemaine = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const moisAnnee = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const aujourdHui = new Date();
+            const jourSemaine = joursSemaine[aujourdHui.getDay()];
+            const jour = aujourdHui.getDate();
+            const mois = moisAnnee[aujourdHui.getMonth()];
+            const jourFormate = jour < 10 ? '0' + jour : jour;
+            const dateTexte = `${jourSemaine} ${mois} ${jourFormate}`;
+            document.getElementById("dateAlgo").innerText = dateTexte;
+        }
+
+        function updateClock() {
+            const clockElement = document.getElementById('clockAlgo');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const currentTime = `-${hours}:${minutes}`;
+            clockElement.textContent = currentTime;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        /************************* algo button ****************************/
+
+        function handleResponse(currentQuestionId, nextQuestionId, toHideId) {
+            const currentQuestion = document.getElementById(currentQuestionId);
+            const buttons = currentQuestion.querySelectorAll('.btn');
+
+            buttons.forEach(button => {
+                if (button.getAttribute('onclick').includes(toHideId)) {
+                    button.style.display = 'none';
+                } else {
+                    button.disabled = true;
+                }
+            });
+
+            if (nextQuestionId) {
+                document.getElementById(nextQuestionId).classList.remove('hidden');
+            }
+        }
+
+        function resetQuestionnaire() {
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                question.classList.add('hidden');
+            });
+
+            const buttons = document.querySelectorAll('.question button');
+            buttons.forEach(button => {
+                button.style.display = 'inline-block';
+                button.disabled = false;
+            });
+
+            document.getElementById('questionFonct').classList.remove('hidden');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

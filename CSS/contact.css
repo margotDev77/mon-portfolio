@@ -1,0 +1,351 @@
+
+.bloc-contact {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  border-radius: 5vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.line-sepa {
+  border: none;
+  height: 2px;
+  background-color: var(--accent-color);
+  width: 85%;
+}
+
+.form-titre {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: slideTitre 0.3s 0.4s ease-in forwards;
+}
+
+@keyframes slideTitre {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.contenair-contact {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  animation: contactBloc 0.4s ease-in forwards;
+  opacity: 1;
+  transform: translateY(35px);
+}
+
+@keyframes contactBloc {
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+.title-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form-titre-1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: slideTitre 0.3s 0.4s ease-in forwards;
+}
+
+@keyframes slideTitre {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.icon-contact {
+  font-size: 3vh;
+  margin: 2vh;
+  color: var(--accent-color);
+  animation: contactIcon 0.8s ease-in forwards;
+  opacity: 1;
+  transform: scale(0);
+}
+
+@keyframes contactIcon {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.img-profil-content {
+  display: flex;
+  margin: 20px;
+}
+
+.img-profil {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 10vh;
+  background-image: url(/Medias/icon-pro.png);
+   /* background-image: url(/Médias/profil.PNG); */
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 5px 7px #00000063;
+  animation: contactProfil 0.4s 0.3s ease-in forwards;
+  opacity: 1;
+  transform: scaleX(0);
+}
+
+@keyframes contactProfil {
+  100% {
+    transform: scaleX(1);
+    transition:
+      opacity 0.7s,
+      transform 0.7s
+  }
+}
+
+
+.icon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon-contact {
+  display: flex;
+  margin-top: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  animation: contactIcon 0.4s ease-in forwards;
+  opacity: 1;
+  transform: scaleX(0);
+  gap: 30px;
+}
+
+@keyframes contactIcon {
+  100% {
+    transform: scaleX(1);
+    transition:
+      opacity 0.7s,
+      transform 0.7s
+  }
+
+}
+
+.social-icon-contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4vh;
+  height: 4vh;
+  text-decoration: none;
+  color: var(--txt-color);
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 32px;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-less-btn);
+  transform: scale(0.98);
+}
+
+.social-icon-contact a:hover {
+  box-shadow: var(--shadow-more-btn);
+}
+
+.bloc-formulaire {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 rgb(255, 255, 255), inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px rgb(111, 129, 151);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+	transform: scale(1.05);
+	opacity: 0;
+	animation: appari 0.7s 0.1s ease-in forwards;
+}
+
+
+@keyframes appari {
+	100% {
+	  opacity: 1;
+	  transform: scale(1);
+	}
+  
+  }
+
+.main {
+  display: flex;
+  width: 98%;
+  align-items: center;
+}
+
+.column-form {
+  display: flex;
+  width: 50%;
+}
+
+.column-form-img {
+  display: flex;
+  border-radius: 30px;
+  width: 50%;
+  background-image: url(/Medias/contact-machine.webp);
+  background-size: cover;
+}
+
+.container-left {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-positif);
+}
+
+.container-right {
+  display: flex;
+  flex-basis: 98%;
+}
+
+.form-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-content-ratio {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+.form-bloc {
+  display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 70%;
+  padding: 0 20px 10px 20px;
+}
+
+
+.form-send {
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  padding-right: 10px;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.form-titre-size {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.retour-ligne {
+  display: block;
+  padding-top: 15px;
+}
+
+/* input {
+  border-style: none;
+  background: none;
+  padding: 1vh;
+  border-radius: 2vh;
+  box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+}
+
+
+input:focus {
+  outline-style: none;
+} */
+
+input[type="radio"] {
+  accent-color: #861b57;
+}
+
+
+.neum-input {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  border: none;
+  box-shadow: var(--shadow-less-btn) !important;
+  padding: 10px 15px;
+  outline: none !important;
+  color: var(--txt-color);
+}
+
+
+fieldset {
+  border-style: none;
+}
+
+select {
+  border-style: none;
+  color: var(--middle-color);
+  background: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+}
+
+option {
+  border-style: none;
+  background: none;
+  box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+}
+
+.sendDisp {
+  transform: translateX(1700px) scale(0.5);
+  transition: 2s ease;
+}
+
+/* input {
+  caret-color: #861b57;
+  margin: 0 0 0 2vh;
+} */
+
+.bloc-info {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+
+}
+
+
+
+/**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+
+
+}

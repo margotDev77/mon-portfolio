@@ -1,0 +1,854 @@
+  
+  .bloc-simul-iphone-music {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 40px 0;
+    gap: 100px;
+  }
+  
+  
+  button {
+    border-style: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
+  
+  .typo-1 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /************************************************** iphone face *************************************************************/
+  
+  .color-accent {
+    color: #6b6a6a;
+  }
+  
+  .color-title-interm {
+    color: #949495;
+  }
+  
+  .color-txt {
+    color: #adadad;
+  }
+  
+  .color-white {
+    color: #ffffff;
+  }
+  
+  .color-clear {
+    color: #ebeff3;
+  }
+  
+  .color-blue-apple {
+    color: #376eb4;
+  }
+  
+  
+  
+  .size-fav {
+    font-size: 18px;
+  }
+  
+  .font-size-titre {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .font-size-courante {
+    font-size: 12px;
+  }
+  
+  .font-size-interm {
+    font-size: 10px;
+  }
+  
+  .font-size-little {
+    font-size: 9px;
+  }
+  
+  
+  /************************************************** iphone face *************************************************************/
+  
+
+  
+  .toggleScreen-content-paysage {
+    display: none;
+    width: 75vh;
+    height: 35vh;
+    background: linear-gradient(105deg, #000000, #000000, #343434, #000000, #000000);
+    background-size: 300% 300%;
+    animation: gradientMove 15s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+  
+  
+  
+  .container-info-accueil-screen {
+    z-index: 4;
+    display: flex;
+    width: 100%;
+    margin: 0 0 2vh 0;
+    position: absolute;
+    top: 1vh;
+  }
+  
+  .container-info-fix-paysage {
+    display: flex;
+    margin: 0 1vh 0 2vh;
+    z-index: 10;
+    position: absolute;
+    flex-direction: column;
+    height: 35vh;
+    right: 0;
+  }
+  
+  .container-info-cam-fix-paysage {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-info-cam-paysage {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-btn-paysage {
+    display: flex;
+    position: absolute;
+    width: 75vh;
+    height: 35vh;
+  }
+  
+  .content-btn-lock-paysage {
+    display: flex;
+    justify-content: flex-start;
+    right: -10px;
+    bottom: 70px;
+    position: absolute;
+  }
+  
+  .lock-btn-paysage {
+    width: 4px;
+    height: 55px;
+    background: linear-gradient(0deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  }
+  
+  .lock-btn-paysage:hover {
+    transform: translateX(-1.25px);
+  }
+  
+  .content-btn-sound-paysage {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 10vh;
+    top: -10px;
+  }
+  
+  .vibr-btn-paysage {
+    margin: 0 1vh 0 1vh;
+    width: 26px;
+    height: 4px;
+    border-radius: 3px 0 0 3px;
+    background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  }
+  
+  .sound-btn-paysage {
+    margin: 0 1vh 0 1vh;
+    width: 26px;
+    height: 4px;
+    background: linear-gradient(90deg, #505050 0%, #8c8c8d 7%, #dfe0df 25%, #c3c3c4 75%, #c4c5c4 90%, #4e4e4e 100%);
+  }
+  
+  .sound-btn-paysage:hover {
+    transform: translateY(1.25px);
+  }
+  
+  
+  /*********************************************** iphone accueil ***********************************************/
+  
+  
+  
+  .line-back {
+    display: flex;
+    bottom: 0;
+    border: none;
+    height: 4px;
+    background-color: #757986;
+    width: 40%;
+    border-radius: 21vh;
+    position: absolute;
+  }
+  
+  .face-cam-paysage {
+    display: flex;
+    width: 2vh;
+    height: 3vh;
+    background-color: #000000;
+    border-radius: 3vh;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.5vh;
+  }
+  
+  
+  .objectif-paysage {
+    width: 1.2vh;
+    height: 1.2vh;
+    border-radius: 2vh;
+    background: radial-gradient(circle, #000000 0%, #0e2d54 20%, #1c1c1c 35%, #181818 50%, #000000 100%);
+  }
+  
+  
+  
+  
+  .content-lock {
+    display: flex;
+    width: 35vh;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 4vh;
+    color: #565254;
+  }
+  
+  .content-clock {
+    display: flex;
+    width: 35vh;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 7vh;
+  }
+  
+  .content-date {
+    display: flex;
+    width: 35vh;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 11vh;
+  }
+  
+  .content-light {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-wrap: nowrap;
+    bottom: 3vh;
+  }
+  
+  .content-btn {
+    display: flex;
+    flex-basis: 33%;
+    justify-content: center;
+  }
+  
+  .content-txt {
+    display: flex;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .txt-scroll-color {
+    color: #9a9797;
+  }
+  
+  .txt-scroll {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.35vh;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: apparitionTxt 0.5s 0.9s ease-in forwards;
+  }
+  
+  @keyframes apparitionTxt {
+    100% {
+      opacity: 1;
+      transform: none;
+  
+    }
+  }
+  
+
+  
+  .btn-accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4vh;
+    height: 4vh;
+    padding: 0.5vh;
+    cursor: pointer;
+    font-size: 2vh;
+    color: #565254;
+    border-radius: 3vh;
+    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+  }
+
+  
+
+  
+  /******************************************* blocs *******************************************/
+  
+  .sound-container {
+    display: flex;
+    width: 7px;
+    height: 32vh;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .sound-bar {
+    display: flex;
+    flex-direction: column;
+    width: 1vh;
+    height: 15vh;
+    /* background-color: #555; */
+    background: rgba(60, 60, 60, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  .sound-level {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #ddd;
+    transition: height 0.1s ease;
+  }
+  
+  
+  .sound-bloc {
+    display: flex;
+    width: 2vh;
+  }
+  
+  .floating-element {
+    position: absolute;
+    top: 10vh;
+    left: -10%;
+    transform: translateX(10%);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  
+  
+  .floating-element.active {
+    left: 10%;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .area {
+    position: relative;
+  }
+  
+  
+  /******************************************* APP MUSIC *******************************************/
+  
+  .color-music {
+    color: #fa273f;
+  }
+  
+  .iphone-face-paysage {
+    width: 75vh;
+    height: 35vh;
+    border-radius: 5vh;
+    border: 3px solid #161616;
+    box-shadow: 0 0 0 3px #c3c3c4;
+    position: relative;
+  }
+  
+  .content-music-paysage {
+    display: flex;
+    flex-direction: column;
+    width: 75vh;
+    height: 35vh;
+  }
+  
+  .content-info-music-paysage {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .content-bloc-extrm-music {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+  }
+  
+  .content-progressbar-sound-paysage {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: #376eb4;
+    width: 125px;
+    font-size: 12px;
+  }
+  
+  .progress-container {
+    position: relative;
+    flex-grow: 1;
+    height: 5px;
+    background-color: #adadad;
+    border-radius: 10px;
+    margin: 0 7px;
+    cursor: pointer;
+  }
+  
+  .progress-barSound {
+    height: 100%;
+    width: 22%;
+    background: linear-gradient(0deg, #376eb4, #a3bcdb);
+    border-radius: 5px;
+    transition: width 0.1s;
+  }
+  
+  .sliders {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22%;
+    width: 20px;
+    height: 20px;
+    background-color: #ebecf0;
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
+      -5px -5px 10px rgba(255, 255, 255, 0.75),
+      inset 0px 0px 4px rgba(255, 255, 255, .2),
+      inset 5px 5px 7px rgba(55, 84, 170, 0),
+      inset -5px -5px 10px rgba(255, 255, 255, 0),
+      0px 0px 4px rgba(255, 255, 255, 0);
+    cursor: grab;
+    transition: left 0.1s;
+  }
+  
+  .content-info-artiste-paysage {
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0),
+      inset 7px 7px 15px rgba(55, 84, 170, .15),
+      inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+    background-color: #ebecf0;
+    border-radius: 10px;
+    padding: 2px 4px;
+    width: 50%;
+    height: 30px;
+    gap: 10px;
+  }
+  
+  .content-line-info-music-paysage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .content-line-info-music-paysage img {
+    width: 27px;
+    border-radius: 7px;
+    margin-right: 5px;
+  }
+  
+  .content-line-info-music-paysage h1 {
+    font-size: 11px;
+    margin: 3px;
+  }
+  
+  .content-line-info-music-paysage p {
+    font-size: 10px;
+    margin: 0;
+  }
+  
+  .color-attenuer {
+    color: #adadadaa;
+  }
+  
+  .content-line-icon-music {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .content-line-icon-music i {
+    font-size: 10px;
+  }
+  
+  .content-title-music-playlist {
+    display: flex;
+    position: absolute;
+    top:50px;
+    left:15px;
+  }
+  
+  .content-title-music-playlist h2 {
+    margin: 0;
+    font-size: 15px;
+    color: #ffffff;
+  }
+  
+  .content-info-music-paysage-back {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 55px;
+    padding-bottom: 5px;
+  }
+  
+  .progressbar-info-paysage {
+    display: flex;
+    width: 255px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .progressbar-info-paysage p {
+    font-size: 9px;
+    margin: 0;
+  }
+  
+  .content-progressbar-paysage {
+    display: flex;
+    width: 220px;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #adadad;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(0deg, #fa273f, #f296a3);
+    border-radius: 10px;
+    transition: width 0.1s ease-in-out;
+  }
+  
+  .btn-info-paysage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
+      -5px -5px 10px rgba(255, 255, 255, 0.75),
+      inset 0px 0px 4px rgba(255, 255, 255, .2),
+      inset 5px 5px 7px rgba(55, 84, 170, 0),
+      inset -5px -5px 10px rgba(255, 255, 255, 0),
+      0px 0px 4px rgba(255, 255, 255, 0);
+    background-color: #ebecf0;
+    aspect-ratio: 1/1;
+  }
+  
+  .btn-music-paysage {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px 14px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 5px 5px 7px rgba(55, 84, 170, .15),
+      -5px -5px 10px rgba(255, 255, 255, 0.75),
+      inset 0px 0px 4px rgba(255, 255, 255, .2),
+      inset 5px 5px 7px rgba(55, 84, 170, 0),
+      inset -5px -5px 10px rgba(255, 255, 255, 0),
+      0px 0px 4px rgba(255, 255, 255, 0);
+    background-color: #ebecf0;
+  }
+  
+  .btn-play-paysage {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px 14px;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0),
+      inset 7px 7px 15px rgba(55, 84, 170, .15),
+      inset -7px -7px 20px rgba(255, 255, 255, 0.75);
+    background-color: #ebecf0;
+  }
+  
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26222a;
+    height: 250px;
+    padding: 5px 20px 10px 20px;
+  }
+  
+  .owl-carousel .flip-img-owl {
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .owl-item .flip-img-owl {
+    transform: rotateY(65deg);
+  }
+  
+  .owl-item.active.center .flip-img-owl {
+    transform: rotateY(0deg);
+  }
+  
+  .owl-item.active.center~.owl-item .flip-img-owl {
+    transform: rotateY(-65deg);
+  }
+  
+  .owl-dots {
+    display: none;
+  }
+  
+  .owl-nav {
+    display: none !important;
+  }
+
+  .owl-nav button {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.owl-nav .owl-prev {
+  left: -40px;
+}
+
+.owl-nav .owl-next {
+  right: -40px;
+}
+  
+  .custom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 210px;
+    z-index: 10;
+  }
+  
+  
+  .flip-container {
+    perspective: 1000px;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .front .flip-img-owl {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .back {
+    width: 180px;
+    height: 180px;
+    background: #333;
+    color: #adadad;
+    transform: rotateY(180deg);
+    overflow: hidden;
+  
+  }
+  
+  .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .scrollable-content {
+    padding: 7px;
+    width: 100%;
+    /* height: 100%; */
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  
+  .scrollable-content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .content-info-album{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding-bottom: 10px;
+    gap: 5px;
+  }
+  
+  .bloc-info-album{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  }
+  
+  .bloc-info-album h1{
+  font-size: 8px;
+  margin: 0;
+  }
+  
+  .bloc-info-album h2{
+  font-size: 8px;
+  font-weight: 300;
+  margin: 0;
+  }
+  
+  .bloc-info-album p{
+  font-size: 6px;
+  }
+  
+  
+  ul {
+    padding: 0;
+  }
+  
+  .list-music {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .content-line-music-title-paysage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    padding: 4px 5px;
+  }
+  
+  .content-line-music-title-active-music-paysage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    padding: 4px 5px;
+    background-color: #fa273f;
+    color: #ebeff3;
+  }
+  
+  .content-line-music-title-active-music-paysage h2 {
+    font-size: 7px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .content-line-music-title-active-music-paysage p,
+  .content-line-music-title-paysage i {
+    font-size: 7px;
+    margin: 0;
+  }
+  
+  .content-line-music-title-paysage:nth-child(even) {
+    background-color: #302b2c;
+  }
+  
+  .content-line-music-title-paysage h2 {
+    font-size: 7px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .content-line-music-title-paysage p,
+  .content-line-music-title-paysage i {
+    font-size: 7px;
+    margin: 0;
+  }
+  
+  .content-title-music-paysage {
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+  }
+  
+  .content-size-img-flip{
+    display: flex;
+    width: 50px;
+    transform:rotateY(0) ;
+  }
+  
+  .content-info-album-back{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+  
+  .content-info-album-back p{
+  margin: 1px;
+  font-size: 6px;
+  }
+  

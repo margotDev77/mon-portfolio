@@ -1,0 +1,697 @@
+
+
+.Flex3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mediasFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.bloc-medias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-medias-3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(90%/2);
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  flex-direction: column;
+}
+
+
+.bloc-gallery {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-titre {
+  display: flex;
+  width: 100%;
+  height: 7vh;
+}
+
+.size-titre {
+  display: flex;
+  width: 100%;
+
+
+}
+
+.bloc-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius: 3vh;
+  margin-left: 40vh;
+}
+
+.size-video{
+  width: 95%;
+}
+
+.content {
+  width: 40vh;
+  border-radius: 5vh;
+  margin-top: 0px;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vh;
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: calc(50% - 150px);
+  top: 40px;
+  border-radius: 5vh;
+}
+
+
+.info-carousel {
+  letter-spacing: 2px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding: 0 0 2vh 0;
+  color: #757986;
+}
+
+.content-info3d {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.info-3d {
+  display: flex;
+  justify-content: center;
+  color: var(--txt-main-color);
+}
+
+.size-img-bague {
+  height: 300px;
+}
+
+.content-image {
+  display: flex;
+  width: 40%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloc-medias-donjon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bloc-medias-donjon:hover {
+  transform: rotate(-180deg);
+}
+
+.content-view {
+  overflow: hidden;
+}
+
+#viewer {
+  /* width: 100vw;
+  height: 100vh; */
+  touch-action: none;
+}
+
+#canvas {
+  display: block;
+  width: 450px;
+  height: 450px;
+}
+
+
+/**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+
+  .headerFlex-horizontal {
+    display: flex;
+    background-color: #ebeff3;
+    width: 100%;
+    border-radius: 0 0 22px 22px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 5.5vh;
+    z-index: 1000;
+    box-shadow: 5px 5px 7px #00000063;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: apparHeader 0.5s ease-in forwards;
+  }
+
+  @keyframes apparHeader {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /***************************************** portfolio web *****************************************/
+
+  .headerFlex-2 {
+    display: flex;
+    background-color: #ebeff3;
+    width: 60%;
+    border-radius: 0vh 5vh 5vh 0vh;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    box-shadow: 5px 5px 7px #00000063;
+  }
+
+  .bloc-border-gallery {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .bloc-gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mediasFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .container-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(90%/3);
+    border-radius: 2vh;
+    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+    aspect-ratio: 1/1;
+    margin: 1vh;
+  }
+
+  .container-medias:nth-child(even) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
+  }
+
+  .bloc-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .medias-size {
+    display: flex;
+  }
+
+  .info-web {
+    display: flex;
+    height: 25vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    font-size: 1.1vh;
+  }
+
+  
+
+ 
+ 
+
+
+  /***************************************** portfolio 3d *****************************************/
+
+  .Flex3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh;
+  }
+
+
+  .container-medias-3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border-radius: 5vh;
+    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+    aspect-ratio: 1/1;
+    margin: 4vh;
+    flex-direction: column;
+    transform: scale(0.95);
+    opacity: 0;
+    animation: appar 0.7s 0.1s ease-in forwards;
+  }
+
+
+  @keyframes appar {
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
+  .bloc-gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-titre {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+  }
+
+  .size-titre {
+    display: flex;
+    width: 100%;
+
+
+  }
+
+  .bloc-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border-radius: 3vh;
+    margin-left: 40vh;
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, 0%);
+    width: 40vh;
+    height: 27vh;
+
+  }
+
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5vh;
+    /* box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15); */
+  }
+
+  #items {
+    width: 10000px;
+    position: relative;
+    top: 0;
+    left: -400px;
+  }
+
+  #items.shifting {
+    transition: left 0.2s ease-out;
+  }
+
+  .slide {
+    width: 40vh;
+    cursor: pointer;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: inherit;
+  }
+
+
+  .content {
+    width: 40vh;
+    border-radius: 5vh;
+    margin-top: 0px;
+  }
+
+
+  .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: calc(50% - 150px);
+    top: 40px;
+    border-radius: 5vh;
+  }
+
+  .img-carousel-size {
+    display: flex;
+    width: 40vh;
+    height: auto;
+  }
+
+
+  .info-carousel {
+    letter-spacing: 2px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    padding: 0 0 2vh 0;
+    color: #757986;
+  }
+
+  .content-info3d {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-3d {
+    display: flex;
+    justify-content: center;
+  }
+
+  .control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 4vh;
+    margin-top: -20px;
+    z-index: 1;
+  }
+
+  .prev,
+  .next {
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
+  }
+
+  .prev {
+    color: #757986;
+    left: -70px;
+  }
+
+  .next {
+    color: #757986;
+    right: -70px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    transform: scale(0.98);
+    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+  }
+
+  .content-scroll {
+    display: flex;
+    width: 40%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .scroll-zone {
+    height: 300px;
+    overflow-y: scroll;
+    position: relative;
+    scrollbar-width: none;
+  }
+
+  #scroll-img {
+    position: sticky;
+    top: 0;
+  }
+
+  .size-img-bague {
+    height: 300px;
+  }
+
+
+
+  .content-image {
+    display: flex;
+    width: 40%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bloc-medias-donjon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bloc-medias-donjon:hover {
+    transform: rotate(-180deg);
+  }
+
+
+
+  .content-view {
+    overflow: hidden;
+  }
+
+  #viewer {
+    /* width: 100vw;
+  height: 100vh; */
+    touch-action: none;
+  }
+
+  #canvas {
+    display: block;
+    width: 450px;
+    height: 450px;
+  }
+
+
+
+}
+
+
+/**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+
+  .headerFlex-horizontal {
+    display: none;
+  }
+
+  .button-portfolio-tab-tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 1.5vh 1vh 1.5vh 1vh;
+    border-radius: 100%;
+    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+    color: #565254;
+    margin-left: 5vh;
+    margin: 1vh;
+    opacity: 0;
+    animation: apparition 0.3s 0.5s ease-in forwards;
+  }
+
+  @keyframes apparition {
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .button-portfolio-tab-tel:hover {
+    box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.1s ease;
+    transform: scale(-0.98);
+    color: #861b57;
+  }
+
+  /***************************************** portfolio web *****************************************/
+
+  .headerFlex-2 {
+    display: none;
+  }
+
+  .webFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .bloc-border-gallery {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .margin-left {
+    margin-left: 1vh;
+  }
+
+  .margin-right {
+    margin-right: 1vh;
+  }
+
+  .bloc-gallery {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filterFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    margin: 3vh;
+  }
+
+  .filter-content {
+    display: flex;
+    width: 100%;
+    border-radius: 2vh;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    margin: 1vh;
+    margin-bottom: 3vh;
+    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
+  }
+
+  .home-menu-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filter-btn {
+    display: flex;
+    margin-right: 0.7vh;
+    margin-left: 0.7vh;
+    border-radius: 1.3vh;
+    padding: 1.3vh;
+    box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+  }
+
+  .filter-btn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #861b57;
+    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+    transform: scale(0.98);
+  }
+
+  .filter-btn.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #861b57;
+    box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+    transform: scale(0.98);
+  }
+
+  .mediasFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .container-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(90%/2);
+    border-radius: 2vh;
+    box-shadow: 1px 1px 3px 0 #c4ceda, -4px 0 3px 0 #ffffff99, 0 -4px 3px 0 #ffffff99, -2px -2px 14px 4px #ffffff, 3px 3px 8px 0 #b0c4db, 3px 3px 15px 0 #c4ceda;
+    aspect-ratio: 1/1;
+    margin: 1vh;
+  }
+
+  .container-medias:nth-child(even) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 14px 14px 12px 0 rgb(196, 206, 218, 0.14), inset -3px -3px 5px 0 #ffffff, inset 2px 2px 5px 0 rgba(196, 206, 218, 0.78), inset 1px 1px 16px -13px #6f8197;
+  }
+
+  .bloc-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .medias-size {
+    display: flex;
+  }
+
+  .info-web {
+    display: flex;
+    height: 22vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    font-size: 1.1vh;
+  }
+
+
+
+
+
+}

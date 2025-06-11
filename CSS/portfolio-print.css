@@ -1,0 +1,551 @@
+body {
+    overflow-x: clip;
+    height: 100vh;
+}
+
+.headerFlex-horizontal {
+    display: flex;
+    background-color: var(--bg-color);
+    width: 100%;
+    /* height: 6vh; */
+    border-radius: 0 0 35px 35px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-header);
+    z-index: 1000;
+    position: fixed;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: apparHeader 0.5s ease-in forwards;
+    /* padding: 5px 0; */
+    padding: 40px 0 5px 0;
+}
+
+@keyframes apparHeader {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/***************************************** portfolio print *****************************************/
+
+
+.button-mep {
+    position: absolute;
+    top: 50%;
+    padding: 1vh 2vh;
+    background-color: #ffffff;
+    color: #565254;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: medium;
+    border-radius: 2vh;
+}
+
+.button-mep:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.content-info-print {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    animation: infoSlide 0.5s 0.4s ease-in forwards;
+    opacity: 1;
+    transform: scaleX(0);
+    color: var(--txt-main-color);
+}
+
+.content-info-print-marque-pages {
+    display: flex;
+    /* height: 80vh; */
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    position: absolute;
+    top: 90%;
+    /* z-index: -1; */
+    animation: infoSlide 0.5s 0.4s ease-in forwards;
+    opacity: 1;
+    transform: scaleX(0);
+    color: var(--txt-main-color);
+}
+
+@keyframes infoSlide {
+    100% {
+        transform: scaleX(1);
+        transition:
+            opacity 0.7s,
+            transform 0.7s
+    }
+
+}
+
+
+.bloc-fd-print-portfolio {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 5vh;
+}
+
+.text-hover {
+    display: flex;
+    width: 100%;
+    height: 4vh;
+    justify-content: center;
+    position: absolute;
+    animation: blink 2s infinite;
+    top: 72%;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.marque-pages-bloc {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+.marque-pages-size {
+    height: 55vh;
+    width: calc(100%/2);
+    border-radius: 1.5vh;
+    box-shadow: -5px 5px 5px #00000063;
+}
+
+.flip-card-container {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.flip-card-front {
+    color: #fff;
+}
+
+.flip-card-back {
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+/************************** scroll horizontal ************************/
+.sticky-parent {
+    height: 700vh;
+}
+
+.sticky {
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.dim {
+    display: block;
+    min-width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.dim-marques-pages {
+    display: block;
+    min-width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.horizontal {
+    display: flex;
+}
+
+.br {
+    outline: solid;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 70vh;
+    margin-top: 15vh;
+}
+
+.image-print {
+    display: flex;
+    width: calc(100%/2);
+    aspect-ratio: 1/1;
+    justify-content: center;
+
+}
+
+
+.border-radius-img {
+    border-radius: 5vh;
+}
+
+
+/************************** vizoneuse img ************************/
+
+.galleryViz {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.galleryViz img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.galleryViz img:hover {
+    transform: scale(0.97);
+    border-color: #861b57;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(122, 122, 122, 0.3);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 45%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: medium;
+    color: #757986;
+}
+
+.lightbox-img {
+    width: 70%;
+    border-radius: 35px;
+}
+
+.image-info {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.close-bttn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    color: #757986;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-bttn:hover {
+    color: #861b57;
+}
+
+
+/**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+
+    .headerFlex-horizontal {
+        display: flex;
+        background-color: var(--bg-color);
+        width: 100%;
+        /* height: 6vh; */
+        border-radius: 0 0 35px 35px;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--shadow-header);
+        z-index: 1000;
+        position: fixed;
+        transform: translateY(-100px);
+        opacity: 0;
+        animation: apparHeader 0.5s ease-in forwards;
+        /* padding: 5px 0; */
+        padding: 40px 0 5px 0;
+    }
+
+    @keyframes apparHeader {
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /***************************************** portfolio print *****************************************/
+
+
+    .button-mep {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1vh 2vh;
+        background-color: #ffffff;
+        color: var(--txt-color);
+        text-decoration: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: medium;
+        border-radius: 2vh;
+    }
+
+    .button-mep:hover {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+
+    .content-info-print {
+        display: flex;
+        height: 55vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+
+    /************************** scroll horizontal ************************/
+    .sticky-parent {
+        height: 700vh;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0px;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .dim {
+        display: block;
+        min-width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dim-marques-pages {
+        display: none;
+    }
+
+    .horizontal {
+        display: flex;
+    }
+
+    .br {
+        outline: solid;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 47vh;
+        margin-top: 25vh;
+        position: center;
+    }
+
+    .image {
+        display: flex;
+        width: calc(100%/2);
+        aspect-ratio: 1/1;
+        position: relative;
+        transition: transform 0.3s ease;
+        justify-content: center;
+    }
+
+
+    .border-radius-img {
+        border-radius: 3vh;
+    }
+
+}
+
+/**************************************************************** RESPONSIVE TELEPHONE ****************************************************************/
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+
+    .headerFlex-horizontal {
+        display: none;
+    }
+
+    .button-portfolio-tab-tel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 1.5vh 1vh 1.5vh 1vh;
+        border-radius: 100%;
+        box-shadow: inset -3px -3px 9px rgb(255, 255, 255, 1), inset -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), inset 3px 3px 9px rgba(0, 0, 0, 0.15);
+        color: var(--txt-color);
+        margin-left: 5vh;
+        margin: 1vh;
+        opacity: 0;
+        animation: apparition 0.3s 0.5s ease-in forwards;
+    }
+
+    @keyframes apparition {
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .button-portfolio-tab-tel:hover {
+        box-shadow: -3px -3px 9px rgb(255, 255, 255, 1), -3px -3px 13px rgb(255, 255, 255, 0.5), inset 3px 3px 5px rgb(255, 255, 255, 0.1), 3px 3px 9px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.1s ease;
+        transform: scale(-0.98);
+        color: var(--accent-color);
+    }
+
+
+    /***************************************** portfolio print *****************************************/
+
+
+    .button-mep {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1vh 2vh;
+        background-color: #ffffff;
+        color: var(--txt-color);
+        text-decoration: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: medium;
+        border-radius: 2vh;
+    }
+
+    .button-mep:hover {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+
+    .content-info-print {
+        display: flex;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+
+    /************************** scroll horizontal ************************/
+    .sticky-parent {
+        height: 700vh;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0px;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .dim {
+        display: block;
+        min-width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dim-marques-pages {
+        display: none;
+    }
+
+    .horizontal {
+        display: flex;
+    }
+
+    .br {
+        outline: solid;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 30vh;
+        margin-top: 25vh;
+        position: center;
+    }
+
+    .image {
+        display: flex;
+        width: calc(100%/2);
+        aspect-ratio: 1/1;
+        position: relative;
+        transition: transform 0.3s ease;
+        justify-content: center;
+    }
+
+
+    .border-radius-img {
+        border-radius: 3vh;
+    }
+
+}

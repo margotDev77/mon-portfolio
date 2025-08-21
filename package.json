@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-cv",
+  "version": "1.0.0",
+  "main": "java.iphone-orga.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/margotDev77/mon-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/margotDev77/mon-portfolio/issues"
+  },
+  "homepage": "https://github.com/margotDev77/mon-portfolio#readme",
+  "description": "",
+  "dependencies": {
+    "three": "^0.179.1"
+  }
+}

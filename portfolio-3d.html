@@ -60,15 +60,54 @@
                         <div class="info-3d typo-1 font-size">Carfi3D model 1</div>
                     </div>
 
-                    <video autoplay loop src="Medias/portfolio/present-car.mp4" class="size-video"></video>
+                     <div class="personnage car">
+                        <div id="div-canvas-car">
+                            <canvas id="canvas-car"></canvas>
+                        </div>
+                        <div class="buttons">
+
+                            <button data-char="car" data-animation="FrontLightsAction" class="button-action">
+                                <span class="color-feu lightRotate material-symbols-outlined">
+                                    backlight_high
+                                </span>
+                            </button>
+
+                            <button data-char="car" data-animation="HeadlightsAction" class="button-action"><span
+                                    class="color-feu2 lightRotate material-symbols-outlined">
+                                    backlight_high
+                                </span></button>
+
+
+                            <button data-char="car" data-animation="essieuAVAction" class="button-action">
+                                <i class="color-start fa-solid fa-power-off"></i>
+                            </button>
+
+                                 <button data-char="car" data-animation="IndicatorsLeftAction" class="button-action color-cligno">
+                                <i class="fa-solid fa-circle-arrow-left"></i>
+                            </button>
+
+                            <button data-char="car" data-animation="IndicatorsRightAction" class="button-action color-cligno">
+                                <i class="fa-solid fa-circle-arrow-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="container-medias-3d blocPositif">
                     <div class="content-info3d">
                         <div class="info-3d typo-1 font-size">Bague rose coeur</div>
                     </div>
-                    <div class="content-view">
-                        <div id="viewer"></div>
+                    <div class="personnage ring">
+                        <div id="div-canvas-ring">
+                            <canvas id="canvas-ring"></canvas>
+                        </div>
+                       <!-- <div class="buttons">
+                            <button data-char="ring" data-animation="salto">1</button>
+                            <button data-char="ring" data-animation="tourni">2</button>
+                            <button data-char="ring" data-animation="pointe">3</button>
+                        </div> -->
                     </div>
                 </div>
 
@@ -170,111 +209,19 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-
-
-    <script>
-
-        let scene, camera, renderer, controls, model;
-
-        function init() {
-            scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xebeff3);
-            camera = new THREE.PerspectiveCamera(75, 1, 0.5, 150);
-            camera.position.set(0, 30, 70);
-
-
-            renderer = new THREE.WebGLRenderer({ antialias: true });
-            renderer.setSize(450, 450);
-            renderer.setPixelRatio(window.devicePixelRatio);
-            document.getElementById('viewer').appendChild(renderer.domElement);
-
-            //contr cam
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-            controls.enableDamping = true;
-            controls.dampingFactor = 0.02;
-            controls.screenSpacePanning = false;
-            controls.minDistance = 40;
-            controls.maxDistance = 100;
-            controls.target.set(0, 25, 100);
-            controls.update();
-
-            const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x080820, 1);
-            scene.add(hemisphereLight);
-
-            //imprt GLB
-            const loader = new THREE.GLTFLoader();
-            loader.load('Medias/bague.glb', (gltf) => {
-                model = gltf.scene;
-                scene.add(model);
-                model.position.set(0, 0, 95);
-
-                //color 1
-                //     model.traverse((child) => {
-                //     if (child.isMesh) {
-                //         child.material.color.set(0x861b57);
-                //     }
-                // });
-
-                // color 2
-                model.traverse((child) => {
-                    if (child.isMesh) {
-                        child.material = new THREE.MeshStandardMaterial({ color: 0xb7b9bf });
-                    }
-                });
-
-
-                //bt obj
-                const boundingBox = new THREE.Box3().setFromObject(model);
-                const center = boundingBox.getCenter(new THREE.Vector3());
-                const size = boundingBox.getSize(new THREE.Vector3());
-                model.position.x += (model.position.x - center.x);
-                model.position.y += (model.position.y - center.y)
-                model.position.z += (model.position.z - center.z)
-
-                //zoom cam
-                const maxDim = Math.max(size.x, size.y);
-                const fov = camera.fov * (Math.PI / 180);
-                let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-                cameraZ *= 0.5;
-
-                controls.target.copy(center);
-                controls.update();
-            });
-
-            window.addEventListener('resize', onWindowResize, false);
-            animate();
+ <script type="importmap">
+        {
+        "imports" : {
+            "three" : "./node_modules/three/build/three.module.js",
+            "GLTFLoader" : "./node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+            "OrbitControls": "./node_modules/three/examples/jsm/controls/OrbitControls.js"
         }
-
-        function onWindowResize() {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(450, 450);
-            renderer.setPixelRatio(window.devicePixelRatio);
         }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            renderer.render(scene, camera);
-        }
-
-        init();
     </script>
+    <script src="scripts3D/main3D.js" type="module"></script>
 
-    <script>
+
+  <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toggleButton = document.getElementById('theme-toggle');
             const icon = document.getElementById('theme-icon');
@@ -295,24 +242,22 @@
                 logo.src = isDark ? 'Medias/dwwm-logo-blanc.png' : 'Medias/dwwm-logo.png';
             }
 
-            function updateSceneBackground(isDark) {
-                if (scene) {
-                    const color = isDark ? 0x2c2f33 : 0xebeff3;
-                    scene.background = new THREE.Color(color);
-                }
-            }
-
 
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 body.classList.add('dark-mode');
                 updateIcon(true);
                 updateLogo(true);
-                updateSceneBackground(true);
-            } else {
+            }
+
+            if (window.globalScenes && Array.isArray(window.globalScenes)) {
+                window.globalScenes.forEach(scene => {
+                    scene.applyThemeModeToScene(savedTheme === 'dark');
+                });
+            }
+            else {
                 updateIcon(false);
                 updateLogo(false);
-                updateSceneBackground(false);
             }
 
             toggleButton.addEventListener('click', () => {
@@ -320,10 +265,30 @@
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
                 updateIcon(isDark);
                 updateLogo(isDark);
-                updateSceneBackground(isDark);
+
+                if (window.globalScenes && Array.isArray(window.globalScenes)) {
+                    window.globalScenes.forEach(scene => {
+                        scene.applyThemeModeToScene(isDark);
+                    });
+                }
+
             });
         });
     </script>
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+
 
 
 </body>

@@ -131,22 +131,146 @@
   transform: rotate(-180deg);
 }
 
-.content-view {
-  overflow: hidden;
+
+
+.personnages {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
 }
 
-#viewer {
-  /* width: 100vw;
-  height: 100vh; */
-  touch-action: none;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 86%;
+    margin-left: 5%;
 }
 
-#canvas {
-  display: block;
-  width: 450px;
-  height: 450px;
+section h2 {
+    margin: 100px 0 50px 0;
+    font-size: 35px;
 }
 
+.personnages canvas {
+    cursor: grab;
+}
+
+#div-canvas-vador,
+#div-canvas-luke {
+    width: 100%;
+    height: 400px;
+}
+
+.fichier canvas {
+    cursor: grab;
+}
+
+#div-canvas-car,
+#div-canvas-ring {
+    width: 100%;
+    height: 400px;
+}
+
+.personnage {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+
+.buttons button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow-less-btn);
+    background-color: var(--bg-color);
+    transform: scale(0.98);
+}
+
+.buttons button:hover {
+    box-shadow: var(--shadow-less-btn-hover);
+}
+
+.color-warning {
+    color:darkorange;
+}
+
+.color-start {
+    color:crimson;
+}
+
+.color-feu {
+    color: #7db70a;
+}
+
+.color-feu2 {
+    color: dodgerblue;
+}
+
+.lightRotate {
+transform: rotate(-90deg);
+}
+
+.color-feu-stop span {
+    color: orange;
+    transform: rotate(180deg);
+}
+
+.color-cligno {
+    color: #7db70a;
+}
+
+
+@media (max-width : 1200px) {
+
+    section {
+        background-color: blueviolet;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .personnages {
+        gap: 100px;
+    }
+
+    .personnage {
+        width: 40%;
+    }
+
+}
+
+@media (max-width : 700px) {
+
+    section {
+        background-color: #ef7f1d;
+        width: 100%;
+    }
+
+    .personnages {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .personnage {
+        width: 100%;
+    }
+
+}
 
 /**************************************************************** RESPONSIVE TABLETTE ****************************************************************/
 

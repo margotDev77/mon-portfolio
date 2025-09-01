@@ -6,7 +6,7 @@ import Personnage3D from "./Personnage3D.js";
 
 
 export default class GlobalScene {
-    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesMobile }) {
+    constructor({ jeu, idCanvas, divCanvasCssSelector, gltfPersonnages, colorLights, isOrbitControls, cameraCoordonnees, cameraCoordonneesMobile } = {}) {
         this.jeu = jeu;
         this.divCanvas = document.querySelector(divCanvasCssSelector);
         this.gltfPersonnages = gltfPersonnages;
@@ -121,7 +121,6 @@ export default class GlobalScene {
         });
     }
 
-
     createLights(colorLights) {
         this.isDay = true;
 
@@ -130,12 +129,12 @@ export default class GlobalScene {
         this.sunLight.position.set(0, 50, 0);
         this.sunLight.castShadow = true;
 
-        //   const helper = new THREE.DirectionalLightHelper(this.sunLight, 5, 0xffcc00);
+        //const helper = new THREE.DirectionalLightHelper(this.sunLight, 5, 0xffcc00);
         //this.scene.add(helper);
 
         // nuit
-        this.nightLight = new THREE.PointLight(0x3344aa, 0.5, 100);
-        this.nightLight.position.set(0, 40, 0);
+        this.nightLight = new THREE.PointLight(0x000000, 0.02, 200);
+        this.nightLight.position.set(0, 50, 0);
 
         //const nightHelper = new THREE.PointLightHelper(this.nightLight, 1);
         //this.scene.add(nightHelper);
@@ -146,17 +145,47 @@ export default class GlobalScene {
         this.applyThemeModeToScene(isDark);
     }
 
+    setEnvMapIntensity(intensity) {
+        this.scene.traverse((node) => {
+            if (node.isMesh && node.material) {
+                if (Array.isArray(node.material)) {
+                    node.material.forEach((mat) => {
+                        if (mat.envMap) {
+                            mat.envMapIntensity = intensity;
+                            mat.needsUpdate = true;
+                        }
+                    });
+                } else {
+                    if (node.material.envMap) {
+                        node.material.envMapIntensity = intensity;
+                        node.material.needsUpdate = true;
+                    }
+                }
+            }
+        });
+    }
+
     applyThemeModeToScene(isDark) {
         if (isDark) {
             if (this.sunLight) this.scene.remove(this.sunLight);
             if (this.nightLight) this.scene.add(this.nightLight);
+
+            this.renderer.toneMappingExposure = 0.01;
             this.isDay = false;
+
+            this.setEnvMapIntensity(0.01);
         } else {
             if (this.nightLight) this.scene.remove(this.nightLight);
             if (this.sunLight) this.scene.add(this.sunLight);
+
+            this.renderer.toneMappingExposure = 0.8;
             this.isDay = true;
+
+            this.setEnvMapIntensity(1);
         }
     }
+
+
 
     createObjects(texture) {
         this.objectsLoaded = 0;
@@ -172,7 +201,7 @@ export default class GlobalScene {
                 rotation: personnage.rotation,
                 initAnimation: personnage.initAnimation
             });
-            
+
         }
     }
 

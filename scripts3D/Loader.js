@@ -1,21 +1,20 @@
+
 export default class Loader {
-constructor(cssDivSelector){
-    this.parent = document.querySelector(cssDivSelector);
-    this.createHtml();
-}
+    constructor(divCanvasCssSelector) {
+        this.divCanvas = document.querySelector(divCanvasCssSelector);
+        this.loaderDiv = document.createElement("div");
+        this.loaderDiv.className = "loader";
+    }
 
+    add() {
+        if (this.divCanvas) {
+            this.divCanvas.appendChild(this.loaderDiv);
+        }
+    }
 
-createHtml(){
-    this.html = document.createElement("div");
-    this.html.classList.add("loader");
-}
-
-add(){
-this.parent.appendChild(this.html);
-}
-
-remove(){
-this.parent.removeChild(this.html);
-}
-
+    remove() {
+        if (this.loaderDiv && this.loaderDiv.parentNode) {
+            this.loaderDiv.parentNode.removeChild(this.loaderDiv);
+        }
+    }
 }

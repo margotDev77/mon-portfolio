@@ -158,12 +158,6 @@ section h2 {
     cursor: grab;
 }
 
-#div-canvas-vador,
-#div-canvas-luke {
-    width: 100%;
-    height: 400px;
-}
-
 .fichier canvas {
     cursor: grab;
 }
@@ -199,6 +193,11 @@ section h2 {
     box-shadow: var(--shadow-less-btn);
     background-color: var(--bg-color);
     transform: scale(0.98);
+}
+
+.buttons button.active {
+    box-shadow: var(--shadow-less-btn-hover);
+    transition: all 0.2s ease;
 }
 
 .buttons button:hover {

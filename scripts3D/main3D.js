@@ -6,7 +6,7 @@ const carScene = new GlobalScene({
   idCanvas: "canvas-car",
   divCanvasCssSelector: "#div-canvas-car",
   gltfPersonnages: [
-    { name: "car", gltf: "../../asset/gltf/car.gltf" }
+    { name: "car", gltf: "../asset/gltf/car.gltf" }
   ],
   colorLights: 0xffffff,
   isOrbitControls: true,
@@ -18,7 +18,7 @@ const ringScene = new GlobalScene({
   idCanvas: "canvas-ring",
   divCanvasCssSelector: "#div-canvas-ring",
   gltfPersonnages: [
-    { name: "ring", gltf: "../../asset/gltf/bague.gltf" }
+    { name: "ring", gltf: "../asset/gltf/bague.gltf" }
   ],
   colorLights: 0xffffff,
   isOrbitControls: true,
